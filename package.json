@@ -1,6 +1,6 @@
 {
   "name": "textmutant",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Mutates text into various other forms.",
   "main": "index.js",
   "scripts": {
@@ -9,6 +9,7 @@
   "keywords": [
     "text"
   ],
+  "homepage": "https://github.com/devayes/textmutant",
   "author": "devayes@gmail.com",
   "license": "MIT"
 }
