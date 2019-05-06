@@ -12,6 +12,7 @@ var options = {
  */
 exports.setOptions = setOptions;
 exports.getOption = getOption;
+exports.upper = upper;
 exports.teen = teen;
 exports.reverse = reverse;
 exports.flip = flip;
@@ -37,6 +38,11 @@ function setOptions(opts)
 function getOption(opt)
 {
   return options[opt] || null;
+}
+
+function upper(str)
+{
+    return str.toUpperCase();
 }
 
 function teen(str)
