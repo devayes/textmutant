@@ -2,42 +2,31 @@
 
 var chars = require('./chars')
 
-var options = {
-
-}
 
 /**
  * Publicly accessible methods.
  * @type object
  */
-exports.setOptions = setOptions;
-exports.getOption = getOption;
-exports.upper = upper;
-exports.teen = teen;
-exports.reverse = reverse;
 exports.flip = flip;
+exports.teen = teen;
+exports.upper = upper;
+exports.random = random;
+exports.reverse = reverse;
 exports.toBinary = toBinary;
 exports.fromBinary = fromBinary;
 
-/**
- * Set and over-ride package options.
- * @param array   opts
- */
-function setOptions(opts)
+function random(str)
 {
-  for (var n in opts) { 
-    options[n] = opts[n]; 
-  }
-}
+    var a = str.split(''),
+        n = a.length;
 
-/**
- * Get an option value
- * @param  string
- * @return string
- */
-function getOption(opt)
-{
-  return options[opt] || null;
+    for(var i = n - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var tmp = a[i];
+        a[i] = a[j];
+        a[j] = tmp;
+    }
+    return a.join('');
 }
 
 function upper(str)

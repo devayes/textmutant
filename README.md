@@ -4,9 +4,7 @@ Node package that mutates text.
 ## Install:
 `$ npm install textmutant`
 
-## Examples:
-
-### Basic example
+## Example:
 
 ```js
 const mutant = require('textmutant');
@@ -21,7 +19,7 @@ console.log('Reverse:', mutant.reverse(text)); // Reverse: .uoy era woh ,olleH
 
 console.log('Teen:', mutant.teen(text)); // Teen: HELlo, hOw are yOU.
 
-var bin = mutant.toBinary(text);
+let bin = mutant.toBinary(text);
 console.log('Text to binary:', bin); // Text to binary: [binary stuff]
 console.log('Binary to text:', mutant.fromBinary(bin)); // Binary to text: Hello, how are you.
 ```
