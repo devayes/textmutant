@@ -2,20 +2,7 @@
 
 var chars = require('./chars')
 
-
-/**
- * Publicly accessible methods.
- * @type object
- */
-exports.flip = flip;
-exports.teen = teen;
-exports.upper = upper;
-exports.random = random;
-exports.reverse = reverse;
-exports.toBinary = toBinary;
-exports.fromBinary = fromBinary;
-
-function random(str)
+const random = (str) =>
 {
     var a = str.split(''),
         n = a.length;
@@ -29,12 +16,12 @@ function random(str)
     return a.join('');
 }
 
-function upper(str)
+const upper = (str) =>
 {
     return str.toUpperCase();
 }
 
-function teen(str)
+const teen = (str) =>
 {
     return str.split('').map(function(v) {
         var chance = Math.round(Math.random());
@@ -42,7 +29,7 @@ function teen(str)
     }).join('');
 }
 
-function reverse(str)
+const reverse = (str) =>
 {
     var split = str.split('');    
     var rev = split.reverse();    
@@ -50,7 +37,8 @@ function reverse(str)
     return join;
 }
 
-function flip(str) {
+const flip = (str) => 
+{
     Object.keys(chars).forEach(function (key) {
     var value = chars[key]
         if(!chars[value]) {
@@ -65,7 +53,7 @@ function flip(str) {
     return result;
 }
 
-function toBinary(str)
+const toBinary = (str) =>
 {
     function zeroPad(num) {
         return "00000000".slice(String(num).length) + num;
@@ -77,7 +65,8 @@ function toBinary(str)
     });
 }
 
-function fromBinary(str) {
+const fromBinary = (str) => 
+{
     str = str.replace(/\s+/g, '');
     str = str.match(/.{1,8}/g).join(" ");
 
@@ -90,3 +79,15 @@ function fromBinary(str) {
     
     return binaryCode.join("");
 }
+
+/**
+ * Publicly accessible methods.
+ * @type object
+ */
+exports.flip = flip;
+exports.teen = teen;
+exports.upper = upper;
+exports.random = random;
+exports.reverse = reverse;
+exports.toBinary = toBinary;
+exports.fromBinary = fromBinary;

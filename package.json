@@ -1,13 +1,13 @@
 {
   "name": "textmutant",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Mutates text into various other forms.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "text"
+    "text", "random", "flip", "to binary", "fom binary", "flip"
   ],
   "homepage": "https://github.com/devayes/textmutant",
   "author": "devayes@gmail.com",
