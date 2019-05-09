@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "text", "randomize", "reverse", "flip", "to binary", "from binary", "mutant"
+    "text", "randomize", "reverse", "flip", "to binary", "from binary", "color to hex", "mutant"
   ],
   "homepage": "https://github.com/devayes/textmutant",
   "author": "devayes@gmail.com",
