@@ -9,7 +9,7 @@ Node package to mutate text into various other forms.
 ```js
 const mutant = require('textmutant');
 
-let text = 'Hello, how are you';
+let text = 'Hello, how are you.';
 
 console.log('Upper:', mutant.upper(text)); // Upper: HELLO, HOW ARE YOU.
 
@@ -34,10 +34,15 @@ Mutate incoming text using short cuts (ie: `/reverse text to reverse`).
 ```js
 const mutant = require('textmutant');
 
+// input example: /reverse Hello, how are you 
+// output: .uoy era woh ,olleH
 if (msg.charAt(0) == '/') {
-    let func = msg.match(/^\/([a-zA-Z0-9]+)\s+/)[1];
-    if (func && typeof mutant[func] === 'function') { 
-        data.msg = mutant[func](msg.replace('/'+func+' ', ''));
+    let func = msg.match(/^\/([a-zA-Z0-9]+)\s+/);
+    if (func.length >= 1) {
+        func = func[1]; 
+    	if (func.length && typeof mutant[func] === 'function') { 
+        	data.msg = mutant[func](msg.replace('/'+func+' ', ''));
+    	}
     }
 }
 ```
